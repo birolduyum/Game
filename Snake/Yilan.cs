@@ -62,7 +62,7 @@ namespace Snake
             int y = random.Next(60, 540);
             x -= x % 20;
             y -= y % 20;
-
+            YilanYem();
             for (int i = 0; i < Boyut; i++)
             {
                 Panel pnl = new Panel();
@@ -159,9 +159,10 @@ namespace Snake
             {
                 if (YilanParca[0].Location == yem.Konum)
                 {
+                    GamePanel.Controls.Remove(yem.YemPanel);
                     YemVarMi = false;
                     YilanYem();
-                    GamePanel.Controls.Remove(yem.YemPanel);
+                    
                     ParcaEkle();
                     Skor++;
                     HizArttir();

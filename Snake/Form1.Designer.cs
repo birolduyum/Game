@@ -81,11 +81,11 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pnlGame);
             this.Controls.Add(this.lblSkor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBasla);
-            this.Controls.Add(this.pnlGame);
+            this.Controls.Add(this.textBox1);
             this.KeyPreview = true;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

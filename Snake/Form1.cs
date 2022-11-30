@@ -10,16 +10,15 @@ namespace Snake
             InitializeComponent();
            
         }
-        protected override bool ProcessCmdKey(ref Message msg, System.Windows.Forms.Keys keyData)
-        {
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
+        //protected override bool ProcessCmdKey(ref Message msg, System.Windows.Forms.Keys keyData)
+        //{
+        //    return base.ProcessCmdKey(ref msg, keyData);
+        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //this.KeyPreview = true;
+            this.KeyPreview = true;            
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
-            //this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             Yon.Add(37, "sol");
             Yon.Add(38, "yukari");
             Yon.Add(39, "sag");
@@ -28,8 +27,9 @@ namespace Snake
 
         private void btnBasla_Click(object sender, EventArgs e)
         {
-            yilan = new Yilan(pnlGame);
             pnlGame.Controls.Clear(); // Oyun alanýný temizle
+            yilan = new Yilan(pnlGame);
+            
             //yilan.YilanOlustur();
             yilan.Boyut = 3;
             yilan.Hiz = 200;
